@@ -24,34 +24,41 @@
 		display: block;
 	}
 	
-	.page-overflow{
+	.page-overflow body{
 		overflow: hidden;
 	}
 	
 	#closeCalculador{
 		float: right;
-    font-weight: 600;
-    font-size: 12px;
-    margin-bottom: 10px;		
+		font-weight: 600;
+		font-size: 12px;
+		margin-bottom: 10px;		
 	}
 	
 	.wrapper__calculator-modal{
-    width: 90vw;
-    height: 100vh;
-    max-height: 500px;
-    max-width: 1440px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    padding: 10px 10px 40px;
-    background: #fbd30a;
-    border-radius: 10px;
-    overflow: hidden;
-    display: none;
-    z-index: 999999;
+		width: 90vw;
+		height: 100vh;
+		max-height: 500px;
+		max-width: 1440px;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding: 10px 10px 40px;
+		background: #fbd30a;
+		border-radius: 10px;
+		overflow: hidden;
+		display: none;
+		z-index: 999999;
+	}
+
+	@media screen and (max-width: 576px) {
+		.wrapper__calculator-modal{
+			height: 90vh;
+			max-height: 100%;
+		}
 	}
 	
 	.wrapper__calculator-modal.opened{
@@ -66,20 +73,24 @@
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		const btnCalculator = document.querySelector('.open_modal');
+		const btnsCalculator = document.querySelectorAll('.open_modal');
 		const btnCloseCalculator = document.querySelector('#closeCalculador');
 		const modalCalculador = document.querySelector('#calculatorModal');
 
-		btnCalculator.addEventListener('click', (event) => {
-			event.preventDefault();
-			modalCalculador.classList.add('opened');
-			document.querySelector('body').classList.add('page-overflow');
-		});
+		for (const btnCalculator of btnsCalculator) {
+			btnCalculator.addEventListener('click', (event) => {
+				event.preventDefault();
+
+				modalCalculador.classList.add('opened');
+				document.querySelector('html').classList.add('page-overflow');
+			});			
+		}
 		
 		btnCloseCalculator.addEventListener('click', (event) => {
 			event.preventDefault();
+
 			modalCalculador.classList.remove('opened');
-			document.querySelector('body').classList.remove('page-overflow');
+			document.querySelector('html').classList.remove('page-overflow');
 		});		
 	});
 </script>
