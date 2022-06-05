@@ -29,6 +29,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body <?php body_class(); ?>>
+
+
 <?php
 if ( function_exists( 'wp_body_open' ) ) {
     wp_body_open();
