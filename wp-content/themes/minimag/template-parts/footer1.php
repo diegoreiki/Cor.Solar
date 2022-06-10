@@ -1,99 +1,55 @@
+<?php
+    $home = get_template_directory_uri();
+?>
+
 <!-- Footer Main -->
-<footer class="container-fluid no-left-padding no-right-padding footer-main">
-
-	<?php
-	//get_template_part("template-parts/instagram-gallery");
-	
-	if( is_active_sidebar("sidebar-7") ||
-		is_active_sidebar("sidebar-8") ||
-		is_active_sidebar("sidebar-9") ||
-		is_active_sidebar("sidebar-10")
-	) {
-		?>
-		<!-- Footer Widget -->
-		<div class="container-fluid no-left-padding no-right-padding footer-widget">
-			<!-- Container -->
-			<div class="container">
-				<div class="row">
-					<?php
-					if(is_active_sidebar("sidebar-7") ) {
-						?>
-						<div class="col-lg-3 col-sm-6">
-							<?php dynamic_sidebar("sidebar-7") ?>
-						</div>
-						<?php
-					}
-					if(is_active_sidebar("sidebar-8") ) {
-						?>
-						<div class="col-lg-3 col-sm-6">
-							<?php dynamic_sidebar("sidebar-8") ?>
-						</div>
-						<?php
-					}
-					if(is_active_sidebar("sidebar-9") ) {
-						?>
-						<div class="col-lg-3 col-sm-6">
-							<?php dynamic_sidebar("sidebar-9") ?>
-						</div>
-						<?php
-					}
-					if(is_active_sidebar("sidebar-10") ) {
-						?>
-						<div class="col-lg-3 col-sm-6">
-							<?php dynamic_sidebar("sidebar-10") ?>
-						</div>
-						<?php
-					}
-					?>
-				</div>
-			</div><!-- Container -->
-		</div><!-- Footer Widget -->
-		<?php
-	}
-	?>
+<footer class="site-footer">
 	<div class="container">
-
-		<?php		
-		get_template_part("template-parts/footersocial_icons");
-
-		if( has_nav_menu('minimag_footer') ) {
-			?>
-			<nav class="navbar ownavigation footer-menu navbar-expand-lg">
-				<div class="navheader">
-					<button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbar-footer" aria-controls="navbar-footer" aria-expanded="false" aria-label="Toggle navigation">
-						<i class="fa fa-bars"></i>
-					</button>
+		<div class="row justify-content-between">
+			<div class="col-12 col-md-4">
+				<div class="footer__item site__brand">
+					<img src="<?=$home ?>/assets/images/logo-footer.jpg" loading="lazy" alt="" />
 				</div>
-				<div class="collapse navbar-collapse" id="navbar-footer">
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'minimag_footer',
-						'container' => false,
-						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'depth' => 10,
-						'menu_class' => 'navbar-nav',
-						'walker' => new minimag_nav_walker
-					));
-					?>
+				<div class="footer__item site__text">
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis modi facilis ex accusantium enim natus non harum error beatae.</p>
 				</div>
-			</nav>
-			<?php
-		}
-		?>
-		<div class="copyright">
-			<?php
-			if( minimag_options("opt_footer_copyright") != "" && function_exists('minimag_copyright') ) {
-				echo minimag_copyright();
-			}
-			else {
-				?><p>
-					<?php esc_html_e('Copyright &copy;',"minimag"); ?>
-					<?php echo date('Y '); ?>
-					<?php esc_html_e('MINIMAG',"minimag"); ?>
-				</p>
-				<?php
-			}
-			?>
+				<div class="footer__item site__social">
+					<ul class="navbar-nav">
+						<li>
+							<a href="" title="Instagram">
+								<img src="<?=$home ?>/assets/images/icon-instagram.jpg" loading="lazy" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="" title="Facebook">
+								<img src="<?=$home ?>/assets/images/icon-facebook.jpg" loading="lazy" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="" title="Linkedin">
+								<img src="<?=$home ?>/assets/images/icon-linkedin.jpg" loading="lazy" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="" title="Whatsapp">
+								<img src="<?=$home ?>/assets/images/icon-whatsapp.jpg" loading="lazy" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 text-right">
+				<div class="footer__item site__brand d-none d-md-block">
+					<img src="<?=$home ?>/assets/images/logo-grafismo.jpg" loading="lazy" alt="" />
+				</div>
+				<div class="footer__item site__text">
+					<address>
+						Rua Agrimensor Sugaya, 288 <br>
+						Itaquera | São Paulo - SP | CEP 08260-030 <br>
+						<a href="">www.corsolar.com.br</a> | <a href="">+55 (11) 4610-6048</a>
+					</address>
+				</div>                
+			</div>
 		</div>
-	</div><!-- Container /- -->
-</footer><!-- Footer Main /- -->
+	</div>
+</footer>
