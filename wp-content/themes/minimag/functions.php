@@ -392,4 +392,17 @@ if( !function_exists('minimag_socialshare_head') ) {
 	}
 	add_action( 'wp_head', 'minimag_socialshare_head', 5 );
 }
+
+function widget_blog_home() {
+
+    register_sidebar( array(
+        'name' => 'Widget Home Blog',
+        'id' => 'widget_blog_home',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'widget_blog_home' );
 ?>

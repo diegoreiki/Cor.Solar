@@ -64,7 +64,7 @@ else {
 						</button>
 						<div id="loginpanel-1" class="desktop-hide">
 							<div class="right toggle" id="toggle-1">
-								<a id="slideit-1" class="slideit" href="#slidepanel"><i class="fo-icons fa fa-briefcase"></i></a>
+								<a id="slideit-1" class="slideit" href="#slidepanel"><i class="fo-icons fa fa-gear"></i></a>
 								<a id="closeit-1" class="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
 							</div>
 						</div>

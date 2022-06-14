@@ -309,7 +309,7 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
 	margin-right: 16px;
 }
 .top-header .top-social li > a {
-	color: #151515;
+	color: #052d65;
 	font-size: 20px;
 	-webkit-transition: all 1s ease 0s;
 	-moz-transition: all 1s ease 0s;
@@ -517,7 +517,7 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
 	background-color: #fff;
 }
 .header_s .menu-block .ownavigation .navbar-nav > li a {
-	color: #151515;
+	color: #052d65;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 13px;
 	letter-spacing: 0.325px;
@@ -3247,7 +3247,7 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
 	}
 	.header_s .ownavigation .navbar-toggler {
 		border: none;
-		color: #151515;
+		color: #052d65;
 		cursor: pointer;
 		margin: 15px 0;
 		position: absolute;
@@ -3256,8 +3256,8 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
 	}
 	.header_s .ownavigation .navbar-toggler:hover, 
 	.header_s .ownavigation .navbar-toggler:focus {
-		border-color: #151515;
-		color: #151515;
+		border-color: #052d65;
+		color: #052d65;
 		opacity: 0.6;
 	}
 	.header_s .menu-block .ownavigation .image-logo {
@@ -3278,7 +3278,7 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
 	.header_s .closeit,
 	.header_s .slideit:hover, 
 	.header_s .closeit:hover  {
-		color: #151515; 
+		color: #052d65; 
 	}
 	.header_s .slideit:hover, 
 	.header_s .closeit:hover {
@@ -3286,7 +3286,13 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
 	}
 
 	.header_s .ownavigation .ddl-switch {
-		background-color: #151515;
+		background-color: #052d65;
+	}
+
+	@media screen and (max-width: 991px) {
+		.header_s .image-logo img{	
+			max-height: inherit !important;
+		}
 	}
 	
 	/* - Header 2 */
@@ -3716,6 +3722,7 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
 	word-wrap: break-word;
 	text-transform: uppercase;	
 }
+.widgettitle,
 .widget-title {
     color: #151515;
     font-family: "Montserrat",sans-serif;
@@ -3727,6 +3734,7 @@ article[class*="type-"] .entry-content .entry-footer .social-share > li  > a:hov
     text-align: center;
     text-transform: uppercase;
 }
+.widgettitle::before,
 .widget-title::before {
     background-color: #e1e1e1;
     bottom: 0;
@@ -6289,5 +6297,11 @@ rs-sbg:before {
 	}
 	.footer-menu .navbar-nav > li:last-of-type {
 		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#mysticky-nav.wrapfixed .myfixed{
+		width: 100% !important;
 	}
 }

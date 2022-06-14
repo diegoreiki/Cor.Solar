@@ -19,16 +19,49 @@
         <div class="item">
             <div class="post-box">
                 <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-01.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
+                    <div class="entry-content">
+                        <span class="post-category">
+                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
+                        </span>
+                        <h3>
+                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
+                        </h3>
+                        <a href="/category/energia/" title="Read More" tabindex="-1">
+                            Leia mais
+                        </a>
+                    </div>                
             </div>                
         </div>
         <div class="item">
             <div class="post-box">
                 <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-02.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
+                    <div class="entry-content">
+                        <span class="post-category">
+                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
+                        </span>
+                        <h3>
+                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
+                        </h3>
+                        <a href="/category/energia/" title="Read More" tabindex="-1">
+                            Leia mais
+                        </a>
+                    </div>                
             </div>                
         </div>    
         <div class="item">
             <div class="post-box">
                 <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-03.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
+                    <div class="entry-content">
+                        <span class="post-category">
+                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
+                        </span>
+                        <h3>
+                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
+                        </h3>
+                        <a href="/category/energia/" title="Read More" tabindex="-1">
+                            Leia mais
+                        </a>
+                    </div>                
             </div>                
         </div>                    
     </div>
@@ -69,9 +102,9 @@
                 }
             ?>
         </div>
-        <div class="section-button">
+        <!-- <div class="section-button">
             <a href="" class="btn btn-lg btn-primary">Show more</a>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -79,16 +112,22 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4">
-                <h2 class="title">Lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                <div class="latest__content">
+                    <h2 class="title">Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                </div>
             </div>
             <div class="col-12 col-md-4">
-                <h2 class="title">Lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                <div class="latest__content">
+                    <h2 class="title">Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                </div>
             </div>
             <div class="col-12 col-md-4">
-                <h2 class="title">Lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                <div class="latest__content">
+                    <h2 class="title">Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt at maiores deleniti.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -102,6 +141,12 @@
                 <span class="caption">Lorem ipsum</span>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="section-widget-homepage">
+    <div class="container">
+        <?php if ( dynamic_sidebar('widget_blog_home') ) : else : endif; ?>
     </div>
 </section>
 

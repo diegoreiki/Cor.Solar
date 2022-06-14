@@ -16,22 +16,22 @@
 				<div class="footer__item site__social">
 					<ul class="navbar-nav">
 						<li>
-							<a href="" title="Instagram">
+							<a href="https://www.instagram.com/corsolaroficial/" title="Instagram">
 								<img src="<?=$home ?>/assets/images/icon-instagram.jpg" loading="lazy" alt="" />
 							</a>
 						</li>
 						<li>
-							<a href="" title="Facebook">
+							<a href="https://www.facebook.com/corsolaroficial" title="Facebook">
 								<img src="<?=$home ?>/assets/images/icon-facebook.jpg" loading="lazy" alt="" />
 							</a>
 						</li>
 						<li>
-							<a href="" title="Linkedin">
+							<a href="https://www.linkedin.com/company/corsolaroficial/" title="Linkedin">
 								<img src="<?=$home ?>/assets/images/icon-linkedin.jpg" loading="lazy" alt="" />
 							</a>
 						</li>
 						<li>
-							<a href="" title="Whatsapp">
+							<a href="tel:+5511971073633" title="Whatsapp">
 								<img src="<?=$home ?>/assets/images/icon-whatsapp.jpg" loading="lazy" alt="" />
 							</a>
 						</li>
@@ -46,7 +46,7 @@
 					<address>
 						Rua Agrimensor Sugaya, 288 <br>
 						Itaquera | São Paulo - SP | CEP 08260-030 <br>
-						<a href="">www.corsolar.com.br</a> | <a href="">+55 (11) 4610-6048</a>
+						<a href="<?=$home ?>">www.corsolar.com.br</a> | <a href="tel:+551146106048">+55 (11) 4610-6048</a>
 					</address>
 				</div>                
 			</div>
