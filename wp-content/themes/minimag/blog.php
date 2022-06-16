@@ -16,54 +16,43 @@
         </div>
     </div>
     <div class="slider-carousel slider-carousel-7">
-        <div class="item">
-            <div class="post-box">
-                <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-01.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
-                    <div class="entry-content">
-                        <span class="post-category">
-                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
-                        </span>
-                        <h3>
-                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
-                        </h3>
-                        <a href="/category/energia/" title="Read More" tabindex="-1">
-                            Leia mais
-                        </a>
-                    </div>                
-            </div>                
-        </div>
-        <div class="item">
-            <div class="post-box">
-                <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-02.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
-                    <div class="entry-content">
-                        <span class="post-category">
-                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
-                        </span>
-                        <h3>
-                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
-                        </h3>
-                        <a href="/category/energia/" title="Read More" tabindex="-1">
-                            Leia mais
-                        </a>
-                    </div>                
-            </div>                
-        </div>    
-        <div class="item">
-            <div class="post-box">
-                <img width="1164" height="500" src="https://corsolar.com.br/wp-content/uploads/2022/06/banner-03.jpg" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="">
-                    <div class="entry-content">
-                        <span class="post-category">
-                            <a href="/category/energia/" rel="category tag" tabindex="-1">Energia</a>
-                        </span>
-                        <h3>
-                            <a href="/category/energia/" title="Lorem ipsum" tabindex="-1">Lorem ipsum</a>
-                        </h3>
-                        <a href="/category/energia/" title="Read More" tabindex="-1">
-                            Leia mais
-                        </a>
-                    </div>                
-            </div>                
-        </div>                    
+        <?php
+            $args = array(
+                'post_type' => 'banner_blog'
+            );
+            $loop = new WP_Query($args);
+            if ($loop->have_posts()) {
+                while ($loop->have_posts()) {
+                    $loop->the_post(); 
+                    $objectBanner =  get_field('objeto_do_post'); 
+                    $category = get_the_category($objectBanner->ID); 
+                    
+                    ?>
+                    <div class="item">
+                        <div class="post-box">
+                            <img width="1164" height="500" style="height: 500px" src="<?php the_post_thumbnail_url(); ?>" class="attachment-minimag_1164_500 size-minimag_1164_500 wp-post-image" alt="<?php the_title(); ?>">
+                            
+                            <?php if (!empty($objectBanner)) { ?>
+                                <div class="entry-content">
+                                    <?php if (!empty($category)) { ?>
+                                        <span class="post-category">
+                                            <a href="<?= esc_url( get_category_link($category[0]->term_id) ) ?>" rel="category tag" tabindex="-1"><?= $category[0]->name ?></a>
+                                        </span>
+                                    <?php } ?>
+                                    <h3>
+                                        <a href="<?= esc_url(get_permalink($objectBanner->ID)); ?>" title="<?php the_title(); ?>" tabindex="-1"><?php the_title(); ?></a>
+                                    </h3>
+                                    <a href="<?= esc_url(get_permalink($objectBanner->ID)); ?>" title="Leia mais" tabindex="-1">
+                                        Leia mais
+                                    </a>
+                                </div>        
+                            <?php } ?>        
+                        </div>                
+                    </div>                 
+                <?php
+                }
+            }
+        ?>              
     </div>
 </section>
 

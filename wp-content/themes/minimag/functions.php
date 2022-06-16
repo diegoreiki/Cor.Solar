@@ -393,6 +393,7 @@ if( !function_exists('minimag_socialshare_head') ) {
 	add_action( 'wp_head', 'minimag_socialshare_head', 5 );
 }
 
+//Custom - PostType Widgets
 function widget_blog_home() {
 
     register_sidebar( array(
@@ -405,4 +406,29 @@ function widget_blog_home() {
     ) );
 }
 add_action( 'widgets_init', 'widget_blog_home' );
+
+
+//Custom - PostType Banners 
+function post_type_banner_blog(){
+    $name = 'Banner Blog';
+    $name_plural = 'Banner Blog';
+    $labels = array(
+        'name' => $name_plural,
+        'name_plural' => $name_plural,
+        'add_new_item' => 'Adicionar novo ' . $name,
+        'edit_item' => 'Editar ' . $name
+    );
+    $supports = array(
+        'title',
+        'thumbnail'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-format-gallery',
+        'supports' => $supports
+    );
+    register_post_type('banner_blog', $args );
+}
+add_action('init', 'post_type_banner_blog');
 ?>
